@@ -1,0 +1,41 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Diretórios do Node.js
+node_modules/
+dist/
+.next/
+out/
+
+# Ambiente de desenvolvimento
+.env
+# Ignore o diretório de pacotes do Node.js
+node_modules/
+
+# Ignore o diretório .next que contém arquivos de build do Next.js
+.next/
+
+# Ignore arquivos de cache do sistema operacional
+.DS_Store
+
+# Ignore arquivos temporários de editor
+*.swo
+*.swp
+
+# Ignore arquivos de configuração do sistema (Windows)
+Thumbs.db
+
+# Ignore arquivos de instalação do npm
+npm-debug.log*
+
+# Ignore todos os arquivos dentro de pastas de compilação
+public/img/*
+
+# Ignore arquivos de variáveis de ambiente (por segurança)
+.env
+
+# Ignore logs e arquivos temporários específicos do editor
+.idea/
+.vscode/
