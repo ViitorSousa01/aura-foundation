@@ -11,6 +11,7 @@ out/
 
 # Ambiente de desenvolvimento
 .env
+
 # Ignore o diretório de pacotes do Node.js
 node_modules/
 
@@ -39,3 +40,11 @@ public/img/*
 # Ignore logs e arquivos temporários específicos do editor
 .idea/
 .vscode/
+
+# Outros arquivos que podem ser sensíveis ou temporários
+*.tsbuildinfo
+*.swp
+*.swo
+# Ignorar o diretório curl-8.1.2
+curl-8.1.2/
+
