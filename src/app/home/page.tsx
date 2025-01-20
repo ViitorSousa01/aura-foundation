@@ -4,7 +4,7 @@ import Image from 'next/image'; // Importação padrão para imagens no Next.js
 import Link from 'next/link'; // Importação padrão para navegação no Next.js
 
 // Importações de componentes personalizados
-import Button from '@/ui/button';
+import Button from '../../ui/button';
 import HeroSection from '@/sections/heroSection';
 import AboutSection from '@/sections/aboutSection';
 import ServicesSection from '@/sections/servicesSection';
