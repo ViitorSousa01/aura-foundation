@@ -1,19 +1,19 @@
 'use client'; // Indica que o componente é um Client Component
 
-import Image from 'next/image';
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import HeroSection from '@/components/sections/herosection';
-import AboutSection from '@/components/sections/aboutsection';
-import ServicesSection from '@/components/sections/servicessection';
-import ChatBotSection from '@/components/sections/chatBotSection';
-import TestimonialsSection from '@/components/sections/testimonialsectio';
+import Image from 'next/image'; // Importação padrão para imagens no Next.js
+import Link from 'next/link'; // Importação padrão para navegação no Next.js
+
+// Importações de componentes personalizados
+import Button from '../../ui/button 
+import HeroSection from '@/sections/heroSection';
+import AboutSection from '@/sections/aboutSection';
+import ServicesSection from '@/sections/servicesSection';
+import ChatBotSection from '@/sections/chatBotSection';
+import TestimonialsSection from '@/sections/testimonialsSection';
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
-    
-
       {/* Hero Section */}
       <HeroSection />
 

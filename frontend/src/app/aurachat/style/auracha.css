@@ -1,0 +1,33 @@
+@import 'tailwindcss/tailwind.css';
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+.assistant-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.assistant-header {
+  flex: 0 0 60px;
+}
+
+.assistant-main {
+  flex: 1;
+  padding: 1rem;
+}
+
+.assistant-footer {
+  flex: 0 0 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,13 +1,14 @@
-# Usa uma imagem do Node.js
+# Base da imagem Node.js
 FROM node:18 AS build
 
 # Define o diretório de trabalho no container
 WORKDIR /app
 
-# Copia os arquivos do projeto
+# Copia arquivos de configuração e instala dependências
 COPY package.json package-lock.json ./
 RUN npm install
 
+# Copia o restante do código
 COPY . .
 
 # Executa o build
@@ -17,15 +18,15 @@ RUN npm run build
 FROM node:18-alpine
 WORKDIR /app
 
-# Copia o build do estágio anterior
+# Copia o build
 COPY --from=build /app/.next ./.next
 COPY --from=build /app/package.json ./
 
-# Instala dependências apenas para produção
+# Instala dependências de produção
 RUN npm install --only=production
 
-# Porta de execução
+# Define porta
 EXPOSE 3000
 
-# Inicia a aplicação
+# Inicia o servidor
 CMD ["npm", "start"]

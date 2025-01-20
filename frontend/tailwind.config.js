@@ -1,3 +1,4 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}', 
@@ -42,7 +43,7 @@ module.exports = {
         '2xl': '1536px',
       },
       fontFamily: {
-        heading: ['Inter', 'sans-serif'], // ou o nome correto da sua fonte
+        heading: ['Inter', 'sans-serif'], // Fontes para headings
       },
     },
   },

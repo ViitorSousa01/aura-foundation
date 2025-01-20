@@ -1,0 +1,15 @@
+
+# Ignore o diretório de pacotes do Python
+__pycache__/
+*.pyc
+
+# Ignore variáveis de ambiente
+.env
+
+# Ignore diretórios do editor
+.idea/
+.vscode/
+
+# Logs e arquivos temporários
+*.log
+*.tmp
