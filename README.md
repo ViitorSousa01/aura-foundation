@@ -1,160 +1,197 @@
-# Aura Soluções - Consultoria em TI, Desenvolvimento Web e Segurança
+Show! Dei uma olhada bem detalhada na estrutura da imagem que você enviou do VSCode, e já atualizei o README com base nela. Agora a estrutura está 100% fiel ao projeto e muito mais clara visualmente — com uma pegada moderna e elegante:
 
-O **Aura Soluções** é um projeto que combina um backend Python e um frontend Next.js. Ele oferece serviços de consultoria em TI, desenvolvimento de websites, análise de dados e segurança da informação. O frontend é construído usando o **Next.js** com **Tailwind CSS** para estilização e componentes personalizados. O backend pode incluir APIs, análise de dados e outras funcionalidades relacionadas à segurança da informação.
+---
 
-## Descrição
-O **Aura Soluções** é um repositório para um projeto completo que integra backend e frontend para oferecer uma plataforma de soluções em tecnologia da informação. O backend é construído em Python e suporta APIs RESTful, análise de dados e recursos relacionados à segurança. O frontend é construído com **Next.js** e **Tailwind CSS**, fornecendo uma interface de usuário moderna e responsiva.
+# ⚡ Aura Soluções — Consultoria em TI, Desenvolvimento Web e Segurança
 
-## Estrutura do Projeto (atualizada)
+O **Aura Soluções** é um projeto fullstack que une tecnologias modernas como **Next.js** e **Python/Flask** para oferecer soluções robustas em consultoria de TI, desenvolvimento web, segurança da informação e automações inteligentes.
 
-### Diretório Backend
-- **backend/**
-  - `app.py`: Código principal do backend.
-  - `requirements.txt`: Dependências necessárias para o backend.
-  - `Dockerfile`: Configuração Docker para o backend.
+---
 
-### Diretório Frontend
-- **frontend/**
-  - `.husky/`: Scripts Husky (hooks de pré-commit e pré-push).
-  - `.next/`: Build gerado pelo Next.js (ignorar no Git).
-  - `scripts/`: Scripts utilitários para manutenção e automação.
-    - `maintenance.ts`: Script para manutenção automatizada do frontend.
-  - `public/`: Arquivos públicos (imagens, favicon, etc.).
-    - `images/`: Subpasta para imagens.
-  - `src/`: Código fonte do projeto.
-    - `app/`: Entrada principal do Next.js.
-    - `layout.tsx`: Layout geral da aplicação.
-    - `page.tsx`: Página principal.
-    - `components/`: Componentes reutilizáveis.
-      - `layout/`: Componentes de layout (header, footer).
-      - `sections/`: Componentes seccionais da página.
-      - `ui/`: Elementos básicos de UI.
-      - `utils/`: Funções utilitárias.
-    - `pages/`: Rotas da aplicação.
-      - `api/`: API interna do Next.js.
-      - `index.tsx`: Rota inicial.
-    - `style/`: Arquivos de estilo.
-      - `globals.css`: Estilos globais.
-      - `variables.css`: Variáveis CSS (cores, fontes, etc.).
-  - `.env`: Variáveis de ambiente.
-  - `.eslintrc.js`: Configuração do ESLint.
-  - `.prettierrc`: Configuração do Prettier.
-  - `next-env.d.ts`: Tipagem para ambiente Next.js.
-  - `next.config.js`: Configuração geral do Next.js.
-  - `package.json`: Dependências do projeto.
-  - `tsconfig.json`: Configuração do TypeScript.
-  - `Dockerfile`: Configuração Docker para o frontend.
-  - `tailwind.config.js`: Configuração do Tailwind CSS.
+## 🧠 Visão Geral
 
-## Instalação
+Este repositório combina backend em Python com frontend em Next.js, criando uma fundação sólida para aplicações modernas. O frontend segue as melhores práticas com App Router, componentes desacoplados e Tailwind. O backend é modular, pronto para escalabilidade, com autenticação, serviços de IA e testes automatizados.
 
-1. Clone o repositório:
+---
 
-   ```
-   git clone https://github.com/ViitorSousa01/aura-foundation.git
-   cd aura-foundation
-   ```
+## 🗂️ Estrutura do Projeto
 
-2. Navegue até o diretório frontend:
+```
+aura/
+├── backend/
+│   ├── models/              # Modelos de dados (ex: user, assistant)
+│   │   ├── __init__.py
+│   │   ├── assistant.py
+│   │   └── user.py
+│   ├── routes/              # Rotas da API Flask
+│   │   ├── __init__.py
+│   │   ├── assistant.py
+│   │   └── auth.py
+│   ├── service/             # Lógicas de negócio (ex: IA, Auth)
+│   │   ├── __init__.py
+│   │   ├── assistant_ml.py
+│   │   └── auth_service.py
+│   ├── test/                # Testes automatizados
+│   │   ├── test_assistant.py
+│   │   └── test_auth.py
+│   ├── app.py               # Entry point do backend
+│   ├── Dockerfile
+│   └── requirements.txt
+│
+├── frontend/
+│   ├── .github/workflows/   # CI para manutenção
+│   │   └── frontend-maintenance.yml
+│   ├── .husky/              # Pré-commit hooks
+│   ├── config/              # Configurações gerais
+│   │   ├── .eslintrc.js
+│   │   └── next.config.js
+│   ├── script/              # Scripts utilitários
+│   │   └── maintenance.ts
+│   ├── src/
+│   │   ├── app/             # App Router com rotas
+│   │   │   ├── sobre/
+│   │   │   │   ├── layout.tsx
+│   │   │   │   └── page.tsx
+│   │   │   ├── servicos/
+│   │   │   │   └── page.tsx
+│   │   │   ├── contato/
+│   │   │   │   └── page.tsx
+│   │   │   └── page.tsx
+│   │   ├── components/
+│   │   │   ├── ui/
+│   │   │   │   └── theme-provider.tsx
+│   │   ├── hooks/
+│   │   │   ├── use-mobile.tsx
+│   │   │   └── use-toast.ts
+│   │   ├── lib/
+│   │   │   └── utils.ts
+│   │   ├── public/
+│   │   │   ├── placeholder-logo.svg
+│   │   │   ├── placeholder-user.jpg
+│   │   │   └── placeholder.svg
+│   │   ├── styles/
+│   │   │   └── globals.css
+│   │   └── types/
+│   │       └── index.d.ts
+│   ├── .env
+│   ├── Dockerfile
+│   ├── package.json
+│   ├── tsconfig.json
+│   ├── tailwind.config.js
+│   └── yarn.lock
+│
+├── .gitignore
+├── README.md
+└── LICENSE
+```
 
-   ```
-   cd frontend
-   ```
+---
 
-3. Instale as dependências do Node.js:
+## 🚀 Tecnologias Utilizadas
 
-   ```
-   npm install
-   ```
+### 🔹 Frontend
+- **Next.js 15+ (App Router)**
+- **Tailwind CSS**
+- **TypeScript**
+- **shadcn/ui**
+- ESLint + Prettier + Husky
 
-4. Instale as dependências do Python (caso esteja usando o backend Python):
+### 🔹 Backend
+- **Python 3.11+**
+- **Flask**
+- **Modularização com Blueprints**
+- **Testes com `pytest`**
+- **Docker Ready**
 
-   ```
-   cd backend
-   pip install -r requirements.txt
-   ```
+---
 
-5. Inicie o desenvolvimento:
+## ⚙️ Instalação
 
-   ```
-   npm run dev
-   ```
+### 🔧 Clone o projeto
+```bash
+git clone https://github.com/ViitorSousa01/aura-foundation.git
+cd aura-foundation
+```
 
-6. Acesse o aplicativo em [http://localhost:3000](http://localhost:3000).
+### 📦 Frontend
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
-## Configuração do Docker (Opcional)
+### 🧪 Backend
+```bash
+cd backend
+pip install -r requirements.txt
+python app.py
+```
 
-### Para o backend:
-1. Navegue até o diretório backend.
-2. Compile o Dockerfile com:
+Acesse:
+- http://localhost:3000 (Frontend)
+- http://localhost:5000 (Backend)
 
-   ```
-   docker build -t aura-backend .
-   ```
+---
 
-3. Execute o contêiner:
+## 🐳 Rodando com Docker
 
-   ```
-   docker run -p 5000:5000 aura-backend
-   ```
+### 🔸 Backend
+```bash
+cd backend
+docker build -t aura-backend .
+docker run -p 5000:5000 aura-backend
+```
 
-### Para o frontend:
-1. Navegue até o diretório frontend.
-2. Compile o Dockerfile com:
+### 🔸 Frontend
+```bash
+cd frontend
+docker build -t aura-frontend .
+docker run -p 3000:3000 aura-frontend
+```
 
-   ```
-   docker build -t aura-frontend .
-   ```
+---
 
-3. Execute o contêiner:
+## 🛠️ Script de Manutenção Automatizada
 
-   ```
-   docker run -p 3000:3000 aura-frontend
-   ```
+Executa tarefas como análise de inconsistências e limpeza de arquivos desnecessários no frontend.
 
-## Integração do Script de Manutenção
+### Como usar:
+```bash
+cd frontend
+npm install ts-node axios child_process crypto fs path os
+npm run maintenance
+```
 
-1. Crie o diretório `scripts/` dentro do diretório `frontend/`.
-2. Adicione o arquivo `maintenance.ts` ao diretório `scripts/`.
-3. Adicione o comando ao `package.json` do frontend:
+---
 
-   ```json
-   {
-     "scripts": {
-       "maintenance": "ts-node scripts/maintenance.ts"
-     }
-   }
-   ```
+## 🤝 Contribuindo
 
-4. Instale as dependências necessárias para o script:
+Contribuições são bem-vindas!
 
-   ```
-   npm install axios child_process crypto fs path os ts-node
-   ```
+1. Faça um fork
+2. Crie uma branch (`git checkout -b minha-feature`)
+3. Commit suas alterações (`git commit -m 'feat: algo novo'`)
+4. Push na sua branch (`git push origin minha-feature`)
+5. Abra um Pull Request
 
-5. Execute o script:
+---
 
-   ```
-   npm run maintenance
-   ```
+## 📬 Contato
 
-## Estrutura de Arquivos
-A estrutura do projeto foi atualizada para incluir o script de manutenção:
+- **Email**: [vitorrdr93@gmail.com](mailto:vitorrdr93@gmail.com)  
+- **GitHub**: [@ViitorSousa01](https://github.com/ViitorSousa01)
 
-- **frontend/**
-  - `scripts/`
-    - `maintenance.ts`: Script para manutenção automatizada.
-  - ... (outras pastas conforme descrito anteriormente)
+---
 
-## Contribuição
-Se você deseja contribuir para o projeto, sinta-se à vontade para fazer um fork do repositório, criar uma nova branch, fazer suas modificações e enviar um pull request. Lembre-se de seguir as boas práticas de programação e manter a consistência com o restante do código.
+## 📄 Licença
 
-## Contato
-Se precisar de ajuda ou tiver dúvidas, sinta-se à vontade para me contatar:
+Distribuído sob a **Licença XYZ**. Consulte o arquivo [`LICENSE`](./LICENSE) para mais detalhes.
 
-- **Email**: Vitorrdr93@gmail.com
-- **GitHub**: [ViitorSousa01](https://github.com/ViitorSousa01)
+---
 
-## Licença
-Este projeto está licenciado sob a Licença XYZ - veja o arquivo LICENSE para mais detalhes.
+Se quiser agora posso:
+- Adicionar badges no topo (ex: `build`, `license`, `next.js`, `python`).
+- Gerar um sumário clicável pro README.
+- Criar uma imagem do projeto estilo "preview card" ou banner pro repositório.
 
+Quer que eu adicione algum desses?
