@@ -1,7 +1,3 @@
-Show! Dei uma olhada bem detalhada na estrutura da imagem que você enviou do VSCode, e já atualizei o README com base nela. Agora a estrutura está 100% fiel ao projeto e muito mais clara visualmente — com uma pegada moderna e elegante:
-
----
-
 # ⚡ Aura Soluções — Consultoria em TI, Desenvolvimento Web e Segurança
 
 O **Aura Soluções** é um projeto fullstack que une tecnologias modernas como **Next.js** e **Python/Flask** para oferecer soluções robustas em consultoria de TI, desenvolvimento web, segurança da informação e automações inteligentes.
