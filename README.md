@@ -185,9 +185,3 @@ Distribuído sob a **Licença XYZ**. Consulte o arquivo [`LICENSE`](./LICENSE) p
 
 ---
 
-Se quiser agora posso:
-- Adicionar badges no topo (ex: `build`, `license`, `next.js`, `python`).
-- Gerar um sumário clicável pro README.
-- Criar uma imagem do projeto estilo "preview card" ou banner pro repositório.
-
-Quer que eu adicione algum desses?
